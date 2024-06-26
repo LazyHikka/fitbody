@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:826388872613:android:6504082bc1795cda023c4c",
+        "mobilesdk_app_id": "1:826388872613:android:db3f31c6830d281c023c4c",
         "android_client_info": {
-          "package_name": "com.fitnessdev.fitbody"
+          "package_name": "com.fitbody.app"
         }
       },
       "oauth_client": [],
