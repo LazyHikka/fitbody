@@ -44,6 +44,8 @@ dependencies:
   cloud_firestore: ^5.0.2
   provider: ^6.1.2
   firebase_ui_auth: ^1.15.0
+  talker_flutter: ^4.3.0
+  get_it: ^7.7.0
 
 dev_dependencies:
   flutter_test:
