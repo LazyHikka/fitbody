@@ -11,14 +11,16 @@ class SetupScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 150),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SetupGender()),
-                );
-              },
-              child: Text('Next'),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SetupGender()),
+                  );
+                },
+                child: Text('Next'),
+              ),
             )
           ],
         ),

@@ -7,7 +7,7 @@ import 'package:fitbody/features/home_screen.dart';
 final routes = {
   '/': (context) => AuthPage(),
   '/log': (context) => LoginScreen(),
-  '/reg': (context) => const RegScreen(),
+  '/reg': (context) => RegScreen(),
   '/fpas': (context) => const ForgetPassword(),
   '/home': (context) => HomeScreen(),
 };

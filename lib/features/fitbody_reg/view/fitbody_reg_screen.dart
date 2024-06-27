@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitbody/features/fitbody_login/view/fitbody_log_screen.dart';
 import 'package:fitbody/features/setup/screens/setup_screen.dart';
 import 'package:fitbody/theme/custom_themes/elevated_button_theme.dart';
@@ -5,7 +6,21 @@ import 'package:fitbody/theme/custom_themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
 class RegScreen extends StatelessWidget {
-  const RegScreen({super.key});
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
+
+  void createUser() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    if (passwordController.text == confirmPasswordController.text) {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: emailController.text, password: passwordController.text);
+    } else {
+      print('password is not the same');
+    }
+  }
+
+  RegScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +75,7 @@ class RegScreen extends StatelessWidget {
                 ),
               ),
 
-              //password textfield
+              //email textfield
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -75,6 +90,7 @@ class RegScreen extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(top: 5, left: 40, right: 40),
                 child: TextField(
+                  controller: emailController,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
@@ -96,11 +112,13 @@ class RegScreen extends StatelessWidget {
                   SizedBox(width: 100),
                 ],
               ),
+              //password textfield
 
               Container(
                 margin: const EdgeInsets.only(
                     top: 5, left: 40, right: 40, bottom: 10),
                 child: TextField(
+                  controller: passwordController,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
@@ -122,11 +140,13 @@ class RegScreen extends StatelessWidget {
                   SizedBox(width: 100),
                 ],
               ),
+              //confirm pass textfield
 
               Container(
                 margin: const EdgeInsets.only(
                     top: 5, left: 40, right: 40, bottom: 10),
                 child: TextField(
+                  controller: confirmPasswordController,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
@@ -147,6 +167,7 @@ class RegScreen extends StatelessWidget {
                 child: ElevatedButton(
                   style: FElevatedButtonTheme.fitElevatedButtonTheme.style,
                   onPressed: () {
+                    createUser();
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => SetupScreen()),
@@ -163,7 +184,7 @@ class RegScreen extends StatelessWidget {
                   style: FTextTheme.describeTextTheme.bodyMedium,
                 ),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pop(
                     context,
                     MaterialPageRoute(builder: (context) => LoginScreen()),
                   );
