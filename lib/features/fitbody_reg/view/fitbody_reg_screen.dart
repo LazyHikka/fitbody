@@ -24,151 +24,153 @@ class RegScreen extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            const SizedBox(height: 50),
-            //welcome text
-            Text('Let`s start!',
-                style: FTextTheme.describeTextTheme.headlineLarge),
-            //username textfield
-            const SizedBox(height: 50),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Username',
-                  style: FTextTheme.describeTextTheme.bodyMedium,
-                ),
-                SizedBox(width: 100),
-              ],
-            ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 50),
+              //welcome text
+              Text('Let`s start!',
+                  style: FTextTheme.describeTextTheme.headlineLarge),
+              //username textfield
+              const SizedBox(height: 50),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Username',
+                    style: FTextTheme.describeTextTheme.bodyMedium,
+                  ),
+                  SizedBox(width: 100),
+                ],
+              ),
 
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 5, left: 40, right: 40, bottom: 10),
-              child: TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding: const EdgeInsets.all(15),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide.none,
+              Container(
+                margin: const EdgeInsets.only(
+                    top: 5, left: 40, right: 40, bottom: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding: const EdgeInsets.all(15),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide.none,
+                    ),
                   ),
                 ),
               ),
-            ),
 
-            //password textfield
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Email',
-                  style: FTextTheme.describeTextTheme.bodyMedium,
-                ),
-                SizedBox(width: 100),
-              ],
-            ),
+              //password textfield
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Email',
+                    style: FTextTheme.describeTextTheme.bodyMedium,
+                  ),
+                  SizedBox(width: 100),
+                ],
+              ),
 
-            Container(
-              margin: const EdgeInsets.only(top: 5, left: 40, right: 40),
-              child: TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding: const EdgeInsets.all(15),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide.none,
+              Container(
+                margin: const EdgeInsets.only(top: 5, left: 40, right: 40),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding: const EdgeInsets.all(15),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide.none,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Password',
-                  style: FTextTheme.describeTextTheme.bodyMedium,
-                ),
-                SizedBox(width: 100),
-              ],
-            ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Password',
+                    style: FTextTheme.describeTextTheme.bodyMedium,
+                  ),
+                  SizedBox(width: 100),
+                ],
+              ),
 
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 5, left: 40, right: 40, bottom: 10),
-              child: TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding: const EdgeInsets.all(15),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide.none,
+              Container(
+                margin: const EdgeInsets.only(
+                    top: 5, left: 40, right: 40, bottom: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding: const EdgeInsets.all(15),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide.none,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Confirm Password',
-                  style: FTextTheme.describeTextTheme.bodyMedium,
-                ),
-                SizedBox(width: 100),
-              ],
-            ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Confirm Password',
+                    style: FTextTheme.describeTextTheme.bodyMedium,
+                  ),
+                  SizedBox(width: 100),
+                ],
+              ),
 
-            Container(
-              margin: const EdgeInsets.only(
-                  top: 5, left: 40, right: 40, bottom: 10),
-              child: TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding: const EdgeInsets.all(15),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide.none,
+              Container(
+                margin: const EdgeInsets.only(
+                    top: 5, left: 40, right: 40, bottom: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding: const EdgeInsets.all(15),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide.none,
+                    ),
                   ),
                 ),
               ),
-            ),
 
-            //login button
+              //login button
 
-            SizedBox(
-              width: 310,
-              height: 80,
-              child: ElevatedButton(
-                style: FElevatedButtonTheme.fitElevatedButtonTheme.style,
+              SizedBox(
+                width: 310,
+                height: 80,
+                child: ElevatedButton(
+                  style: FElevatedButtonTheme.fitElevatedButtonTheme.style,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SetupScreen()),
+                    );
+                  },
+                  child: Text('Создать аккаунт',
+                      style: FTextTheme.describeTextTheme.headlineLarge),
+                ),
+              ),
+              SizedBox(height: 90),
+              IconButton(
+                icon: Text(
+                  'Войти в аккаунт',
+                  style: FTextTheme.describeTextTheme.bodyMedium,
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SetupScreen()),
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
                   );
                 },
-                child: Text('Создать аккаунт',
-                    style: FTextTheme.describeTextTheme.headlineLarge),
               ),
-            ),
-            SizedBox(height: 90),
-            IconButton(
-              icon: Text(
-                'Войти в аккаунт',
-                style: FTextTheme.describeTextTheme.bodyMedium,
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
-                );
-              },
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
